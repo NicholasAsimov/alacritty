@@ -1019,7 +1019,7 @@ impl<'a, T: EventListener, A: ActionContext<T>> Processor<'a, T, A> {
         }
 
         // Check mouse mode if location is not special.
-        if !self.ctx.modifiers().shift() && mouse_mode {
+        if (!self.ctx.modifiers().shift() && mouse_mode) || true {
             MouseState::Mouse
         } else {
             MouseState::Text
